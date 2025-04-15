@@ -161,16 +161,16 @@ class ResnetBlocWithAttn(nn.Module):
         return x
 
 
-class UNet(nn.Module):
+class UNet_small(nn.Module):
     def __init__(
         self,
         in_channel=6,
         out_channel=3,
         inner_channel=32,
         norm_groups=32,
-        channel_mults=(1, 2, 4, 8, 8),
-        attn_res=(8,), 
-        res_blocks=3,
+        channel_mults=(1, 2, 4),
+        attn_res=(4,), 
+        res_blocks=2,
         dropout=0,
         with_time_emb=True
     ):
